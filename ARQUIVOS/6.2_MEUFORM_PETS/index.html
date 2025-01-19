@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Doação de Animais</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+   <div class="container">
+    <div class="header">
+        <h3>Cadastre um pet para doação!</h3>
+    </div>
+    <div class="form-container">
+        <div class="form-header">
+            <p>Formulário</p>
+        </div>
+        <div class="form-body">
+            <h1 class="form-title">Anuncie seu animal para adoção!</h1>
+            <p class="form-main-p">Descreva as características do pet e suas especificidades</p>
+            <form>
+                <div class="box-input">
+                    <label for="title">Título do anúncio <span class="required-field">*</span></label>
+                    <input type="text" name="title" id="title" class="block" placeholder="Um título para anunciar o animal" minlength="5" maxlength="30" required>                    
+                </div>
+                <div class="box-input">
+                    <label for="age">Idade do animal <span class="required-field">*</span></label>
+                    <input type="text" list="ages" name="age" id="age" class="block" placeholder="Escreva a idade ou selecione uma opção" minlength="5" maxlength="30" required>
+                    <datalist id="ages">
+                        <option value="De 0 a 3 meses"></option>
+                        <option value="De 4 a 7 meses"></option>
+                        <option value="De 8 meses a 1 ano"></option>
+                        <option value="De 1 a 2 anos"></option>
+                    </datalist>                    
+                </div>
+                <div class="box-input">
+                    <label for="description">Descrição <span class="required-field">*</span></label>
+                    <textarea name="description" id="description" class="block" placeholder="Aqui você coloca os detalhes do pet e suas condições para adoção"></textarea>                    
+                </div>
+                <div class="box-input">
+                    <label for="species">Espécie <span class="required-field">*</span></label>
+                    <input 
+                    type="text" 
+                    name="species" 
+                    id="species" 
+                    class="block" 
+                    placeholder="Informe a espécie do animal"                     
+                    required />                   
+                </div>
+                <div class="box-input">
+                    <label for="race">Raça <span class="required-field">*</span></label>
+                    <input 
+                    type="text" 
+                    name="race" 
+                    id="race" 
+                    class="block" 
+                    placeholder="Informe a raça"                     
+                    required />                    
+                </div>
+                <div class="box-input">
+                    <label for="weight">Peso</label>
+                    <input 
+                    type="number" 
+                    name="weight" 
+                    id="weight" 
+                    class="block" 
+                    placeholder="Qual o peso do animal?"                     
+                     />                     
+                </div>
+                <div class="box-input">
+                    <label for="birthday">Data de nascimento</label>
+                    <input 
+                    type="date" 
+                    name="birthday" 
+                    id="birthday" 
+                    class="block"                     
+                     />                     
+                </div>
+                <div class="box-input">
+                    <p>Sexo do animal <span class="required-field">*</span></p>
+                    <input type="radio" id="macho" name="gender">
+                    <label for="macho">Macho</label>
+                    <input type="radio" id="fem" name="gender">
+                    <label for="fem">Fêmea</label>
+                </div>
+                <div class="optional-box">
+                    <p>Outras informações</p>
+                    <ul class="optional-list">
+                        <li>
+                            <input 
+                            type="checkbox"
+                            id="castrated"
+                            name="optional[]"
+                            value="castrado">
+                            <label for="castrated">Castrado</label>
+                        </li>
+                        <li>
+                            <input 
+                            type="checkbox"
+                            id="anti-rabies"
+                            name="optional[]"
+                            value="antirrabica">
+                            <label for="anti-rabies">Vacina Antirrábica</label>
+                        </li>
+                        <li>
+                            <input 
+                            type="checkbox"
+                            id="multipurpose"
+                            name="optional[]"
+                            value="polivalente">
+                            <label for="multipurpose">Vacina Polivalente</label>
+                        </li>
+                        <li>
+                            <input 
+                            type="checkbox"
+                            id="weaned"
+                            name="optional[]"
+                            value="desmamado">
+                            <label for="weaned">Desmamado</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="optional-box">                   
+                    <ul class="optional-list">
+                        <li>
+                            <input 
+                            type="checkbox"
+                            id="hypoallergenic"
+                            name="optional[]"
+                            value="hipoalerginico">
+                            <label for="hypoallergenic">Hipoalergênico</label>
+                        </li>
+                        <li>
+                            <input 
+                            type="checkbox"
+                            id="long-hair"
+                            name="optional[]"
+                            value="Pelo-longo">
+                            <label for="long-hair">Pelo longo</label>
+                        </li>
+                        <li>
+                            <input 
+                            type="checkbox"
+                            id="socialized"
+                            name="optional[]"
+                            value="socializado">
+                            <label for="socialized">Socializado</label>
+                        </li>
+                        <li>
+                            <input 
+                            type="checkbox"
+                            id="meek"
+                            name="optional[]"
+                            value="manso">
+                            <label for="meek">Manso</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-input">
+                    <p>Fotos do Pet <span class="required-field">*</span></p>
+                    <input type="file" multiple accept="image/png, image/jpg" id="images" required>
+                </div>
+                <div class="btn-container">
+                    <input type="submit" value="Enviar" class="btn-submit">   
+                </div>                                         
+            </form>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
